@@ -39,6 +39,7 @@ class 两数之和 {
 
     /**
      * 一遍遍历，先写put,再写前面的返回条件！
+     * 运行所有用例再提交！map.get(target-nums[i]) 写成了map.get(nums[i])
      * @创建人 ls
      * @创建时间 2020/10/31 22:17
      */
@@ -47,7 +48,7 @@ class 两数之和 {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(target-nums[i] )) {
-                return new int[]{map.get(nums[i]), i};
+                return new int[]{map.get(target-nums[i]), i};
             }
             map.put(nums[i], i);
         }
